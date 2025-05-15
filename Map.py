@@ -59,4 +59,4 @@ class Map:
     # The next stpe is to generate random value and the table will be filled by rewards and obstacles 
     # The next step is to make the agent capable of identify obstacle and reward and learn from it to chose the best direction
     # And save those data !!important so if the map is the same the agent will not learn again and just go straight to the goal 
-    #
+    # The next step is to make the agent capable of identify obstacle and reward and learn from it to chose the best direction
