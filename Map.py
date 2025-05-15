@@ -5,6 +5,7 @@ class Map:
         self.name = name
         self.random_array = []
         self.rewards = []
+    
         self.level = [ math.sqrt((self.size[0]**2 - self.size[1]**2)/2) - 1 , math.sqrt((self.size[0]**2 - self.size[1]**2)/2) , math.sqrt((self.size[0]**2 - self.size[1]**2)/2) +1]
     
     # Intialze when the map is full of 0 cells
