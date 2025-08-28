@@ -142,7 +142,7 @@ class Map:
 # Test script
 if __name__ == "__main__":
     m = Map(level=3, size=(6, 6), name="test_map", difficulty=3)
-    m.add_infos(6, 6, 2)
+    m.add_infos(6, 6, 6)
     #m.add_obstacle(6, 6) 
     print("Map array:")
     m.visualize_map_new()
