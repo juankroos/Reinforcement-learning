@@ -17,6 +17,22 @@ class Agent(Positions):
         #self.actions = actions
         self.current_position = (0, 0)
         self.total_reward = 0
+        self.x = 0
+        self.y = 0
+    
+    def deplacement(self,x,y):
+        """move the agent to a new location"""
+        if (x < 0 or x >= self.table.size[0]) or (y < 0 or y >= self.table.size[1]):
+            raise ValueError("new position is out of bounds")
+        if self.table.arrr[x][y] == '*':
+            raise ValueError("nw position is an obstacle")
+        self.current_position = (x, y)
+        self.x = x
+        self.y = y
+
+    def check():
+        """check if the agent is at the goal position"""
+        return self.current_position == (self.table.size[0] - 1, self.table.size[1] - 1)
     
     
 
