@@ -36,6 +36,8 @@ class Agent(Positions):
     
     
 
-
+# next steap make de decision process
+# next steap make the choices process
+# next steap make the learning process
     
             
