@@ -23,6 +23,8 @@ class Agent(Positions):
         for i in range(table.size[0]):
             for j in range(table.size[1]):
                 self.q_table[(i,j)] = {0.0,0.0,0.0,0.0}
+        self.action = {"up":(0,1),"down":(1,0),"up_right":(1,1),"down_right":(1,-1),"down":(0,-1),"left":(-1,0),"down_left":(-1,-1),"up_left":(-1,1),"stay":(0,0)}
+        #self.action = {(0.0),(0,1),(1,0),(1,1),(0,-1)}
 
     def fill_q_table(self, state, action, reward, next_state, alpha, gamma):
         """update the q_table using the Q-learning algorithm"""
@@ -31,7 +33,7 @@ class Agent(Positions):
         new_q = (1 - alpha) * current_q + alpha * (reward + gamma * max_future_q)
         self.q_table[state][action] = new_q
 
-        
+
     def deplacement(self,x,y):
         """move the agent to a new location"""
         if (x < 0 or x >= self.table.size[0]) or (y < 0 or y >= self.table.size[1]):
