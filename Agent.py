@@ -23,8 +23,18 @@ class Agent(Positions):
         for i in range(table.size[0]):
             for j in range(table.size[1]):
                 self.q_table[(i,j)] = {0.0,0.0,0.0,0.0}
-        self.action = {"up":(0,1),"down":(1,0),"up_right":(1,1),"down_right":(1,-1),"down":(0,-1),"left":(-1,0),"down_left":(-1,-1),"up_left":(-1,1),"stay":(0,0)}
-        #self.action = {(0.0),(0,1),(1,0),(1,1),(0,-1)}
+        
+        self.actions = {
+    "up": (0, 1),         # +y
+    "down": (0, -1),      # -y
+    "right": (1, 0),      # +x
+    "left": (-1, 0),      # -x
+    "up_right": (1, 1),   # +x, +y
+    "up_left": (-1, 1),   # -x, +y
+    "down_right": (1, -1),# +x, -y
+    "down_left": (-1, -1),# -x, -y
+    "stay": (0, 0)
+}
 
     def fill_q_table(self, state, action, reward, next_state, alpha, gamma):
         """update the q_table using the Q-learning algorithm"""
