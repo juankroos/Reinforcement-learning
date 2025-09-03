@@ -46,6 +46,7 @@ class Agent(Positions):
 
     def choose_action(self, next_state):
         """choose an action based on the current state using an algorithm policy"""
+        
         #epsilon-greedy algorithm
         epsilon = 0.1  # exploration rate
         if random() < epsilon:
@@ -84,7 +85,7 @@ class Agent(Positions):
         self.x = x
         self.y = y
 
-    
+
     #to stop the agent when it reach the goal
     def check():
         """check if the agent is at the goal position"""
