@@ -44,9 +44,24 @@ class Agent(Positions):
     3: (0, 1)    # right
 }
 
-    def choose_action(self, state):
+    def choose_action(self, next_state):
+        """choose an action based on the current state using an algorithm policy"""
+        #epsilon-greedy algorithm
+        epsilon = 0.1  # exploration rate
+        if random() < epsilon:
+            return np.random.choice(list(self.actions.keys()))
+        else:
+            return np.argmax(self.q_table[next_state])
+        
+        #deterministic policy
+
+        #Boltzmann policy
+
+        #stochastic policy
+
+
         pass
-    def fill_q_table(self, state, action, reward, next_state, alpha, gamma):
+    def fill_q_table(self, state, action, reward, next_state, alpha, gamma): # state,reward, from map next_state from choose_action 
         """update the q_table using the Q-learning algorithm"""
         # the next state choice in base on algorithm for deplacement
 
@@ -58,6 +73,7 @@ class Agent(Positions):
         #another way to do it
         #self.q_table[state] = new_q
 
+    
     def deplacement(self,x,y):
         """move the agent to a new location"""
         if (x < 0 or x >= self.table.size[0]) or (y < 0 or y >= self.table.size[1]):
@@ -74,7 +90,9 @@ class Agent(Positions):
     
     
 
-# next steap make de decision process
 
-# next steap make the choices process
-# next steap make the learning process
+# next steap make de decision process finished.... just e-greedy for now
+
+# next steap make the choices process finished...
+
+# next steap make the learning process finished... in the fill_q_table method
