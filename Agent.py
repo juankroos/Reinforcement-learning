@@ -46,7 +46,7 @@ class Agent(Positions):
 
     def choose_action(self, next_state):
         """choose an action based on the current state using an algorithm policy"""
-        
+
         #epsilon-greedy algorithm
         epsilon = 0.1  # exploration rate
         if random() < epsilon:
@@ -59,7 +59,6 @@ class Agent(Positions):
         #Boltzmann policy
 
         #stochastic policy
-
 
         pass
     def fill_q_table(self, state, action, reward, next_state, alpha, gamma): # state,reward, from map next_state from choose_action 
