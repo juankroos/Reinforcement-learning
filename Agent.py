@@ -79,11 +79,13 @@ class Agent(Positions):
         if (x < 0 or x >= self.table.size[0]) or (y < 0 or y >= self.table.size[1]):
             raise ValueError("new position is out of bounds")
         if self.table.arrr[x][y] == '*':
-            raise ValueError("nw position is an obstacle")
+            raise ValueError("new position is an obstacle")
         self.current_position = (x, y)
         self.x = x
         self.y = y
 
+    
+    #to stop the agent when it reach the goal
     def check():
         """check if the agent is at the goal position"""
         return self.current_position == (self.table.size[0] - 1, self.table.size[1] - 1)
