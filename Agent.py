@@ -93,6 +93,7 @@ class Agent(Positions):
     
 
 
+
 # next steap make de decision process finished.... just e-greedy for now
 
 # next steap make the choices process finished...
