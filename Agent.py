@@ -43,7 +43,7 @@ class Agent(Positions):
     2: (0, -1),  # left
     3: (0, 1)    # right
 }
-
+    # policy
     def choose_action(self, next_state):
         """choose an action based on the current state using an algorithm policy"""
 
