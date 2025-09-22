@@ -149,6 +149,6 @@ if __name__ == "__main__":
     print("\n")
     m.visualize_map_new()
     print(m.random_array)
-    #m.visualize_map()
+    m.visualize_map()
     #m.generate_obstacle_new(2,3)
     #m.visualize_map()
