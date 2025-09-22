@@ -55,7 +55,7 @@ class Map:
     def generate_obstacle(self,n,m):
         for i in range(n):
             for j in range(m):
-                match self.dificulty:
+                match self.difficulty:
                     case 1:
                         for i in range(self.level[0]):
                             self.add_obstacle(n,m)
@@ -88,3 +88,8 @@ class Map:
     # The next step is to make the agent capable of identify obstacle and reward and learn from it to chose the best direction
     # And save those data !!important so if the map is the same the agent will not learn again and just go straight to the goal 
     # The next step is to make the agent capable of identify obstacle and reward and learn from it to chose the best direction
+if __name__ == "__main__":
+    map1 = Map(1,(10,10),"map1",2)
+    a = map1.generate_obstacle(10,10)
+    print(map1.random_array)
+    print(map1.rewards)
