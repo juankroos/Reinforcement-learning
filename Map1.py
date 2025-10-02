@@ -52,8 +52,6 @@ class Map:
                     self.arrr[x][y] = '*'
 
                     
-
-        
         
     def add_obstacle(self, n, m):
         """Add obstacles randomly, stopping at difficulty-based threshold."""
