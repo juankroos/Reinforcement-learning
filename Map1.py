@@ -146,6 +146,7 @@ if __name__ == "__main__":
     #m.add_obstacle(6, 6) 
     print("Map array:")
     m.visualize_map_new()
+    
     print("\n")
     m.visualize_map_new()
     #print(m.random_array) 
